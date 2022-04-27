@@ -15,6 +15,9 @@ export class HeaderComponent implements OnInit {
 
   toggleAgregarTarea(){
     // LA ACCION VIENE DEL BUTTON COMPONENT MEDIANTE OUTPUT Y EMIT
+    // todo corre correctamente! 
+    
     console.log("Diste click al button!")
+
   }
 }
