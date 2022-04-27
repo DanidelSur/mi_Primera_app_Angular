@@ -1,4 +1,5 @@
 import { TAREA } from "./TAREA"
+// Lista de tareas WOrKS!
 export const listaDeTAREAS : TAREA[] = [
     {
         id: 1,
