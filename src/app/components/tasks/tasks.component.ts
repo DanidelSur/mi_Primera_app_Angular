@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { TAREA } from 'src/app/TAREA';
-import { listaDeTAREAS } from 'src/app/mock-tareas';
+// import { listaDeTAREAS } from 'src/app/mock-tareas';
+import { TareaSService } from 'src/app/service/tarea-s.service';
+// import { Observable } from 'rxjs';
+
 @Component({
   selector: 'app-tasks',
   templateUrl: './tasks.component.html',
@@ -8,12 +11,15 @@ import { listaDeTAREAS } from 'src/app/mock-tareas';
 })
 export class TasksComponent implements OnInit {
 
-  unasTareas: TAREA[] = listaDeTAREAS 
+  unasTareas: TAREA[] = [] 
 
   
-  constructor() { }
+  constructor(private taskService: TareaSService) { }
 
   ngOnInit(): void {
+    this.taskService.getTasks().subscribe((tareas)=>{
+      this.unasTareas = tareas
+    })
   }
 
 }
