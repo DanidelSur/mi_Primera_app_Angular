@@ -9,6 +9,7 @@ import { listaDeTAREAS } from 'src/app/mock-tareas';
 export class TasksComponent implements OnInit {
 
   unasTareas: TAREA[] = listaDeTAREAS 
+
   
   constructor() { }
 
