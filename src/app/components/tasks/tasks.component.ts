@@ -22,4 +22,15 @@ export class TasksComponent implements OnInit {
     })
   }
 
+  borrarTarea(tarea: TAREA){
+    this.taskService.borrarTarea(tarea).subscribe(()=>{
+      this.unasTareas = this.unasTareas.filter(t => t.id !== tarea.id)
+    })
+  }
+
+  toggleReminder(tarea: TAREA){
+    tarea.reminder = !tarea.reminder 
+    this.taskService.actualizarReminder(tarea).subscribe()
+  }
+    
 }

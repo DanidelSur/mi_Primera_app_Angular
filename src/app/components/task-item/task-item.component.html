@@ -1,4 +1,4 @@
-<div class="task">
-    <h3>{{tarea.texto}} <fa-icon [icon]="faTimes" [ngStyle]="{'color':'red'}"></fa-icon></h3>
+<div class="task" [ngClass]="{ reminder:tarea.reminder }" (click)="onToggle(tarea)">
+    <h3>{{tarea.texto}} <fa-icon [icon]="faTimes" [ngStyle]="{'color':'red'}" (click)="aDescartar(tarea)"></fa-icon></h3>
     <p>{{tarea.dia}}</p>
 </div>

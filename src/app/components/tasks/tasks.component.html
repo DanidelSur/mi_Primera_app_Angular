@@ -1,4 +1,4 @@
-<app-task-item *ngFor="let tarea of unasTareas" [tarea]="tarea">
+<app-task-item *ngFor="let tarea of unasTareas" [tarea]="tarea" (aDescartarTarea)="borrarTarea(tarea)" (onToggleReminder)="toggleReminder(tarea)">
     <!--! Cuidado tenia FOR en vez de OF -->
     {{tarea.texto}}
 </app-task-item>

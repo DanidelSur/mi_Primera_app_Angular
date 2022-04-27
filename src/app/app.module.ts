@@ -28,4 +28,5 @@ import { TaskItemComponent } from './components/task-item/task-item.component';
 export class AppModule { }
 
 // * HASTA BASE D todo funciona Correctamente
-// ? Base E en progreso: Jsonserver...
+// * Base E Funciona con Exito! 
+// * Base F ANDUVO LA CONCHA DE LA LORA!!! era H en minuscula! ;c
