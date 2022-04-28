@@ -43,4 +43,5 @@ export class AppModule { }
 // * Base E Funciona con Exito! 
 // * Base F ANDUVO LA CONCHA DE LA LORA!!! era H en minuscula! ;c
 // * BASE G Formulario completado y funcionando ok, Base de datos ok. todo ok! :D
-// ? Base H en progreso...
+// * BASE H UI Agregado y y el funcionamiento de la APP funciona correctamente! :3
+// ? BASE I .... en progreso
