@@ -1,7 +1,12 @@
 <header>
     <h1 [ngStyle]="{'color':'Brown'}">{{title}}</h1>
     <!-- One way Bading -->
-    <app-button  color="{{showAgregarTarea ? 'red':'green'}}" text="{{showAgregarTarea ? 'Cerrar Tarea':'Agregar Tarea'}}" (btnClick)="toggleAgregarTarea()"></app-button>
+    <app-button 
+        color="{{showAgregarTarea ? 'red':'green'}}" 
+        text="{{showAgregarTarea ? 'Cerrar Tarea':'Agregar Tarea'}}" 
+        (btnClick)="toggleAgregarTarea()"
+        *ngIf="comoRuta('/')"
+    ></app-button>
     <!-- Viaja al App-BUTTON!-->
     
 </header>

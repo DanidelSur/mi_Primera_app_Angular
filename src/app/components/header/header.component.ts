@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UiService } from 'src/app/service/ui.service';
 import { Subscription } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -13,7 +14,7 @@ export class HeaderComponent implements OnInit {
   subcripcion?: Subscription
 
 
-  constructor(private uiServicio:UiService) {
+  constructor(private uiServicio:UiService,private router:Router) {
     this.subcripcion = this.uiServicio.onToggle().subscribe(value => this.showAgregarTarea = value)
    }
 
@@ -26,5 +27,9 @@ export class HeaderComponent implements OnInit {
     
     this.uiServicio.toggleAgregarTarea()
 
+  }
+
+  comoRuta(route:String){
+    return this.router.url === route
   }
 }

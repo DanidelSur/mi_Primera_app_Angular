@@ -12,10 +12,12 @@ import { TasksComponent } from './components/tasks/tasks.component';
 import { TaskItemComponent } from './components/task-item/task-item.component';
 import { AddTasksComponent } from './components/add-tasks/add-tasks.component';
 import { AboutComponent } from './components/about/about.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 const appRoutes:Routes = [
-  {path: '', component: TasksComponent}
+  {path: '', component: TasksComponent},
+  {path: 'About', component: AboutComponent}
 ] 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ const appRoutes:Routes = [
     TasksComponent,
     TaskItemComponent,
     AddTasksComponent,
-    AboutComponent
+    AboutComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -44,4 +47,4 @@ export class AppModule { }
 // * Base F ANDUVO LA CONCHA DE LA LORA!!! era H en minuscula! ;c
 // * BASE G Formulario completado y funcionando ok, Base de datos ok. todo ok! :D
 // * BASE H UI Agregado y y el funcionamiento de la APP funciona correctamente! :3
-// ? BASE I .... en progreso
+// * BASE I FINALIZADO! Practica finalizada: resultado : app funcionando correctamente :D
