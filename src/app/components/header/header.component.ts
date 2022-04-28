@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UiService } from 'src/app/service/ui.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -7,8 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   title: string = "Mi Lista de Tareas🐕"
+  showAgregarTarea: boolean = false
+  subcripcion?: Subscription
 
-  constructor() { }
+
+  constructor(private uiServicio:UiService) {
+    this.subcripcion = this.uiServicio.onToggle().subscribe(value => this.showAgregarTarea = value)
+   }
 
   ngOnInit(): void {
   }
@@ -17,7 +24,7 @@ export class HeaderComponent implements OnInit {
     // LA ACCION VIENE DEL BUTTON COMPONENT MEDIANTE OUTPUT Y EMIT
     // todo corre correctamente! 
     
-    console.log("Diste click al button!")
+    this.uiServicio.toggleAgregarTarea()
 
   }
 }

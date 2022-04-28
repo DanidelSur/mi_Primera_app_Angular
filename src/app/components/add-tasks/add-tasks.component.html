@@ -1,6 +1,6 @@
-<form class="add-form" (ngSubmit)="onSubmit()">
+<form class="add-form" (ngSubmit)="onSubmit()" *ngIf="showAgregarTarea">
     <div class="form-control"> 
-        <label for="Tarea">Tarea</label>
+        <label for="Tarea" [ngStyle]="{'color':'cornflowerblue'}">Tarea</label>
         <input 
             type="text" 
             name="Tarea" 
@@ -11,7 +11,7 @@
 
     </div>
     <div class="form-control"> 
-        <label for="Dia">Tarea</label>
+        <label for="Dia" [ngStyle]="{'color':'cornflowerblue'}">Fecha y Hora</label>
         <input 
             type="text" 
             name="Dia" 
@@ -23,7 +23,7 @@
     </div>
     <div class="form-control form-control-check"> 
 
-        <label for="Reminder">Reminder</label>
+        <label for="Reminder" [ngStyle]="{'color':'darkorange'}">Recordar</label>
         <input 
             type="checkbox" 
             id="reminder" 
