@@ -45,14 +45,19 @@ body{
 .btn-block {
     display: block;
     width: 100%;
+    margin-top: 15px;
 }
 
 .form-control {
-    margin: 20px 0;
+    margin: 5px 0;
 }
 
 .form-control label {
     display: block;
+    text-align:start;
+    padding-left: 20px;
+    margin-bottom: 0px;
+    justify-content: center;
 }
 
 .form-control input {
@@ -66,7 +71,8 @@ body{
 .form-control-check {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    margin-top: 0px;
 }
 
 .form-control-check label {
@@ -75,5 +81,5 @@ body{
 
 .form-control-check input {
     flex: 2;
-    height: 20px;
+    height: 22px;
 }

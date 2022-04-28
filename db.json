@@ -29,12 +29,6 @@
       "texto": "Ordenar la Pieza",
       "dia": "Mañana",
       "reminder": false
-    },
-    {
-      "id": 6,
-      "texto": "Tomar mucha Agua!",
-      "dia": "todos los dias igual",
-      "reminder": true
     }
   ]
 }

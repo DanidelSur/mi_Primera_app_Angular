@@ -35,4 +35,11 @@ export class TareaSService {
     return this.http.put<TAREA>(url, tarea, httpOptions)
 
   }
+
+  agregarUnaTarea(tarea: TAREA):Observable<TAREA>{
+    
+    // const url = `${this.apiUrl}/${tarea.id}`
+
+    return this.http.post<TAREA>(this.apiUrl, tarea, httpOptions)
+  }
 }

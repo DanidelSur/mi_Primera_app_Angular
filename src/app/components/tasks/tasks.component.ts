@@ -32,5 +32,11 @@ export class TasksComponent implements OnInit {
     tarea.reminder = !tarea.reminder 
     this.taskService.actualizarReminder(tarea).subscribe()
   }
+
+  agregarUnaTarea(tarea: TAREA){
+    this.taskService.agregarUnaTarea(tarea).subscribe(tarea => {
+      this.unasTareas.push(tarea)
+    })
+  }
     
 }
